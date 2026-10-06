@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pericardiocentesis: An Infographic for the ED</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #1e293b;
+        }
+        .header-bg {
+            background-color: #005eb8; /* NHS Blue */
+        }
+        .section-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .tab-button {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .tab-button.active {
+            background-color: #005eb8;
+            color: white;
+            border-color: #005eb8;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .list-item::before {
+            content: '✓';
+            color: #007f3b; /* NHS Green */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .contra-list-item::before {
+            content: '✗';
+            color: #d5281b; /* NHS Red */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .pearl-item::before {
+            content: '💡';
+            display: inline-block;
+            width: 1em;
+            margin-left: -1.2em;
+        }
+        h2 {
+            color: #005eb8;
+            border-bottom: 2px solid #005eb8;
+            padding-bottom: 0.5rem;
+        }
+        img {
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="header-bg text-white p-6 md:p-8 shadow-lg">
+        <div class="container mx-auto text-center">
+            <!-- 
+              LOGO LINK UPDATED to emevidence.org 
+              LOGO SRC UPDATED to new version
+            -->
+            <a href="https://emevidence.org/" target="_blank" class="inline-block mb-4">
+                <img src="https://raw.githubusercontent.com/shakeymedic/wmem/main/emevidence_logo.png" alt="EMEvidence Logo" class="h-16 md:h-20 w-auto mx-auto" style="background-color: white; border-radius: 0.5rem; padding: 0.5rem;">
+            </a>
+            <h1 class="text-3xl md:text-4xl font-bold">Pericardiocentesis in Cardiac Tamponade</h1>
+            <p class="text-lg md:text-xl mt-2">A Practical Infographic for UK Emergency Medicine Doctors</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 md:p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Indications -->
+            <div class="section-card p-6 md:col-span-2 lg:col-span-1">
+                <h2 class="text-2xl font-bold mb-4">Indications</h2>
+                <p class="mb-4">Pericardiocentesis is indicated for both therapeutic and diagnostic purposes.</p>
+                <div class="space-y-3">
+                    <p class="font-semibold text-lg">Therapeutic:</p>
+                    <ul class="list-inside space-y-2 pl-4">
+                        <li class="list-item"><strong>Cardiac Tamponade:</strong> Life-threatening compression requiring emergent fluid removal.</li>
+                        <li class="list-item">Symptomatic moderate-to-large effusions not responding to medical therapy.</li>
+                        <li class="list-item">Chronic large effusions (>20mm in diastole, >3 months).</li>
+                    </ul>
+                    <p class="font-semibold text-lg mt-4">Diagnostic:</p>
+                    <ul class="list-inside space-y-2 pl-4">
+                        <li class="list-item">Suspected tuberculous, bacterial, or neoplastic pericarditis.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contraindications -->
+            <div class="section-card p-6">
+                <h2 class="text-2xl font-bold mb-4">Contraindications</h2>
+                <p class="mb-4">Primarily relative, especially in life-threatening tamponade.</p>
+                <div class="space-y-3">
+                    <p class="font-semibold text-lg">Absolute (Needle drainage):</p>
+                    <ul class="list-inside space-y-2 pl-4">
+                        <li class="contra-list-item">Aortic dissection.</li>
+                        <li class="contra-list-item">Post-infarction free wall rupture.</li>
+                        <li class="text-sm pl-1">(These are surgical emergencies. Can be a bridge if surgery is delayed).</li>
+                    </ul>
+                    <p class="font-semibold text-lg mt-4">Relative:</p>
+                    <ul class="list-inside space-y-2 pl-4">
+                        <li class="contra-list-item">Uncorrected coagulopathy / Anticoagulant therapy.</li>
+                        <li class="contra-list-item">Thrombocytopenia (Platelets &lt;50,000/mm³).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Anatomy -->
+            <div class="section-card p-6 flex flex-col items-center justify-center">
+                <h2 class="text-2xl font-bold mb-4 text-center">Key Anatomical Considerations</h2>
+                <!-- 
+                  IMAGE SRC UPDATED: 
+                  Changed from .png to .jpg to match your uploaded file.
+                -->
+                <img src="pericardiocentesis-anatomy.jpg" alt="Anatomy for Pericardiocentesis" class="w-full h-auto object-contain" onerror="this.onerror=null;this.src='https://placehold.co/600x400/005eb8/ffffff?text=Anatomy+Image';">
+                <p class="text-center mt-2 text-sm text-gray-600">Note proximity of heart to lungs, liver, and internal thoracic artery.</p>
+            </div>
+
+            <!-- Approaches -->
+            <div class="section-card p-6 md:col-span-2 lg:col-span-3">
+                <h2 class="text-2xl font-bold mb-4">Procedural Approaches Compared</h2>
+                <p class="mb-4">Echo-guidance is the modern standard of care. The optimal entry site is where the fluid is maximal and closest to the probe, avoiding vital structures. The table below summarises the pros and cons of each anatomical approach.</p>
+                <div class="grid md:grid-cols-3 gap-6 items-center">
+                    <div class="md:col-span-2">
+                        <!-- 
+                          IMAGE SRC CHECKED: 
+                          File 'pericardiocentesis-approaches-table.png' is correct.
+                        -->
+                        <img src="pericardiocentesis-approaches-table.png" alt="Table comparing pericardiocentesis approaches" class="w-full h-auto" onerror="this.onerror=null;this.src='https://placehold.co/800x600/005eb8/ffffff?text=Approaches+Table';">
+                    </div>
+                    <div class="md:col-span-1">
+                        <!-- 
+                          IMAGE SRC UPDATED: 
+                          Changed from .png to .jpg to match your uploaded file.
+                        -->
+                         <img src="pericardiocentesis-approaches-diagram.jpg" alt="Diagram of pericardiocentesis approaches" class="w-full h-auto" onerror="this.onerror=null;this.src='https://placehold.co/400x400/005eb8/ffffff?text=Approaches+Diagram';">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Equipment -->
+            <div class="section-card p-6 md:col-span-2 lg:col-span-1">
+                <h2 class="text-2xl font-bold mb-4">Required Equipment</h2>
+                <!-- 
+                  IMAGE SRC CHECKED: 
+                  File 'pericardiocentesis-equipment-list.png' is correct.
+                -->
+                <img src="pericardiocentesis-equipment-list.png" alt="List of equipment needed for pericardiocentesis" class="w-full h-auto" onerror="this.onerror=null;this.src='https://placehold.co/600x400/005eb8/ffffff?text=Equipment+List';">
+            </div>
+            
+            <!-- Echo-Guided Technique -->
+            <div class="section-card p-6 md:col-span-2 lg:col-span-2">
+                <h2 class="text-2xl font-bold mb-4">Echo-Guided Technique: Key Steps</h2>
+                <ol class="list-decimal list-inside space-y-3">
+                    <li><strong>Preparation:</strong> Position patient semi-reclined (30°). Aseptic technique. Local anaesthetic. Continuous ECG and BP monitoring.</li>
+                    <li><strong>Site Selection:</strong> Use echo to find the largest pocket of fluid closest to the skin.</li>
+                    <li><strong>Needle Advancement:</strong> Advance a 16-18G needle with a saline-filled syringe under constant aspiration. Visualise with echo.</li>
+                    <li><strong>Confirm Position:</strong> Once fluid is aspirated, inject agitated saline (5ml). Bubbles should appear in the pericardial space on echo.</li>
+                    <li><strong>Seldinger Technique:</strong> Insert guidewire, remove needle. Pass dilator, then insert pigtail catheter.</li>
+                    <li><strong>Drainage:</strong> Aspirate fluid slowly. Initially remove enough to normalise haemodynamics (not >1L).</li>
+                    <li><strong>Post-Procedure:</strong> Secure catheter. Repeat echo. Consider chest X-ray to exclude pneumothorax.</li>
+                </ol>
+            </div>
+
+            <!-- Echo Images -->
+            <div class="section-card p-6 flex flex-col items-center justify-center">
+                 <h2 class="text-2xl font-bold mb-4 text-center">Echo Guidance in Action</h2>
+                <!-- 
+                  IMAGE SRC UPDATED: 
+                  Changed from .jpeg to .jpg to match your uploaded file.
+                -->
+                <img src="pericardiocentesis-echo-guidance.jpg" alt="Echo guided pericardiocentesis" class="w-full h-auto object-contain" onerror="this.onerror=null;this.src='https://placehold.co/600x400/005eb8/ffffff?text=Echo+Image';">
+                <p class="text-center mt-2 text-sm text-gray-600">Continuous visualisation of the needle tip (E) and guidewire (F) is crucial for safety.</p>
+            </div>
+
+            <!-- Pearls & Pitfalls -->
+            <div class="section-card p-6 md:col-span-2 lg:col-span-3">
+                <h2 class="text-2xl font-bold mb-4">Pearls & Pitfalls</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-bold text-xl mb-2 text-green-700">Pearls</h3>
+                        <ul class="list-inside space-y-2 pl-5">
+                            <li class="pearl-item">The drainage of even a small amount of fluid can cause dramatic haemodynamic improvement.</li>
+                            <li class="pearl-item">An echo-selected site (often apical) has a higher success and lower complication rate than a routine subxiphoid approach.</li>
+                            <li class="pearl-item">Agitated saline contrast is a simple, effective way to confirm catheter tip position in the pericardial space.</li>
+                            <li class="pearl-item">Leaving a catheter in for extended drainage (24-72h) significantly reduces recurrence.</li>
+                        </ul>
+                    </div>
+                    <div>
+                         <h3 class="font-bold text-xl mb-2 text-red-700">Pitfalls</h3>
+                        <ul class="list-inside space-y-2 pl-4">
+                            <li class="contra-list-item">Avoid positive pressure ventilation if possible; it can worsen haemodynamic compromise.</li>
+                            <li class="contra-list-item">Diuretics are contraindicated and can be fatal.</li>
+                            <li class="contra-list-item">Rapid drainage of >1L can cause rare but life-threatening pericardial decompression syndrome (pulmonary oedema/shock).</li>
+                            <li class="contra-list-item">A bloody aspirate could be haemorrhagic effusion or cardiac chamber puncture. Use agitated saline to differentiate.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-8 py-4 text-center text-gray-500 text-sm">
+        <p>Summarised from <a href="https://www.escardio.org/Journals/E-Journal-of-Cardiology-Practice/Volume-15/Pericardiocentesis-in-cardiac-tamponade-indications-and-practical-aspects" target="_blank" class="underline hover:text-blue-600">De Carlini & Maggiolini (2017), E-Journal of Cardiology Practice</a>. For educational purposes only.</p>
+        <p>Always refer to local guidelines and senior advice.</p>
+    </footer>
+
+</body>
+</html>
+
